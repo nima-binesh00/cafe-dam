@@ -1,0 +1,12 @@
+# Netlify build configuration — TanStack Start (SSR) via Nitro's Netlify preset.
+# NITRO_PRESET overrides the cloudflare-module default in vite.config.ts, so the
+# build outputs static assets to dist/ and the SSR function to
+# .netlify/functions-internal/ (auto-detected by Netlify; function serves /*).
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "22"

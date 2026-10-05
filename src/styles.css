@@ -1,0 +1,70 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1430px;
+  --breakpoint-2xl: 1430px;
+
+  --font-primary: "Vazirmatn", sans-serif;
+  --font-secondary: "Vazirmatn", sans-serif;
+
+  --color-primary: oklch(0.17 0.005 20);
+  --color-secondary: oklch(0.58 0.02 255);
+  --color-accent: oklch(0.72 0.07 65);
+  --color-accent-hover: oklch(0.61 0.06 65);
+  --color-background: oklch(1 0 0);
+  --color-border: oklch(0.92 0.01 255);
+
+  --background-image-hero_overlay: url("/assets/hero/hero-overlay.png");
+  --background-image-opening_hours: url("/assets/opening-hours/bg.png");
+  --background-image-footer: url("/assets/footer/bg.png");
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    @apply font-secondary text-secondary leading-relaxed bg-background;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary font-primary;
+  }
+  button {
+    cursor: pointer;
+  }
+}
+
+@utility h1 {
+  @apply text-[70px] xl:text-[150px] leading-[1.1] font-semibold;
+}
+@utility h2 {
+  @apply text-[56px] xl:text-[80px] leading-[1.2] font-bold;
+}
+@utility lead {
+  @apply text-lg;
+}
+@utility btn {
+  @apply min-w-[156px] h-[54px] px-6 bg-accent hover:bg-accent-hover text-primary text-[15px] font-semibold transition-all;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: var(--color-primary);
+  font-size: 2rem !important;
+}
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  color: var(--color-primary);
+}
