@@ -1,7 +1,3 @@
-# Remix of Remix of Cozy Coffee Corner
-
-https://github.com/arnobt78/CoffeeShop-Landing-Page-1--NextJS-Frontend.git
-این ریپو رو بالا بیار
 
 ## Development
 
